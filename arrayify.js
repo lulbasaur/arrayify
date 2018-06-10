@@ -1,10 +1,13 @@
 exports.evalArray = function (arr) {
-    console.log('ok')
     arr = arr.split(',')
     if (Array.isArray(arr)) {
       let arrUpper = arr.map(item => item.toUpperCase() );
       if (arrUpper.includes('FOO') || arrUpper.includes('BAR')) {
-        return  true;
+        let obj = {
+          "success" : true,
+          "result": arr
+        }
+        return  obj;
       }
       else {
         return false;
